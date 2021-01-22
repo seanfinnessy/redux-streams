@@ -5,23 +5,13 @@ import StreamEdit from './streams/StreamEdit';
 import StreamDelete from './streams/StreamDelete';
 import StreamList from './streams/StreamList';
 import StreamShow from './streams/StreamShow';
-
-const PageOne = () => {
-  return (
-    <Link to='/pagetwo'>Nav to Page Two</Link>  
-  )
-};
-
-const PageTwo = () => {
-  return (
-    <Link to='/'>Nav to Page One</Link>  
-  )
-};
+import Header from './Header';
 
 const App = () => {
   return (
-    <div>
+    <div className="ui container">
       <BrowserRouter>
+        <Header />
         <div>
           <Route path="/" exact component={StreamList} />
           <Route path="/streams/new" exact component={StreamCreate} />
