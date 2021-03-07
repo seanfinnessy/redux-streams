@@ -22,7 +22,7 @@ class GoogleAuth extends React.Component {
   // make an arrow function bc it is being used as a callback function, so that it context is bound to the component.
   onAuthChange = (isSignedIn) => {
     if (isSignedIn) {
-      this.props.signIn();
+      this.props.signIn(this.auth.currentUser.get().getId());
     } else {
       this.props.signOut();
     }
