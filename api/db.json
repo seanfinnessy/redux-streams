@@ -4,6 +4,17 @@
       "title": "seans stream",
       "description": "best stream ever",
       "id": 1
+    },
+    {
+      "title": "aproto stream",
+      "description": "clicking heads!",
+      "id": 2
+    },
+    {
+      "title": "My stream",
+      "description": "I created this stream!",
+      "userId": "102938365158513695743",
+      "id": 3
     }
   ]
 }
