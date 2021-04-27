@@ -34,9 +34,12 @@ export const fetchStream = (id) => async (dispatch) => {
   dispatch({ type: "FETCH_STREAM", payload: response.data });
 };
 
+// we changed from PUT to PATCH because PUT updated ALL properties in the stream (aka ended up deleting some bc we didnt send userId, only sent title and description). 
+//PATCH updates only the properties that we want to update (title and description).
 export const editStream = (id, formValues) => async (dispatch) => {
-  const response = await streams.put(`/streams/${id}`, formValues);
+  const response = await streams.patch(`/streams/${id}`, formValues);
   dispatch({ type: "EDIT_STREAM", payload: response.data });
+  history.push('/');
 };
 
 export const deleteStream = (id) => async (dispatch) => {
