@@ -1,5 +1,6 @@
 const NodeMediaServer = require('node-media-server');
 
+// rtmp server makes video available for consumption on port 8000. on port 1935 is where someone will send streaming video to.
 const config = {
   rtmp: {
     port: 1935,
